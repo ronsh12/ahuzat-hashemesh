@@ -18,7 +18,6 @@ import {
   ShowerHead,
   MapPin,
   Leaf,
-  Quote,
   Sun,
   Maximize2,
 } from 'lucide-react';
@@ -29,7 +28,8 @@ import {
   DialogDescription,
   DialogClose,
 } from '@/components/ui/dialog';
-import { reviews } from './reviews';
+import GuestReviews from './guest-reviews';
+import { LegalLinks } from './legal-page';
 export const whatsapp =
   'https://wa.me/972505998055?text=' +
   encodeURIComponent(
@@ -324,32 +324,7 @@ export default function Experience() {
             הם כבר התארחו אצלנו –<br />
             זה מה שהם מספרים...
           </h2>
-          {reviews.length > 0 ? (
-            <div className="review-grid">
-              {reviews.map((review, i) => (
-                <blockquote key={i}>
-                  <Quote />
-                  <p>{review.text}</p>
-                  <footer>
-                    {review.name}
-                    {review.date && <span> · {review.date}</span>}
-                  </footer>
-                </blockquote>
-              ))}
-            </div>
-          ) : (
-            <div className="reviews-empty">
-              <Quote strokeWidth={1} />
-              <p>
-                הסיפורים שלכם הם חלק מהמקום.
-                <span>חוות דעת של אורחינו יתווספו כאן בקרוב.</span>
-              </p>
-              <a className="text-link" href={whatsapp}>
-                יש שאלות? נשמח לדבר
-                <ArrowUpLeft size={17} />
-              </a>
-            </div>
-          )}
+          <GuestReviews />
         </div>
       </section>
       <section className="contact section" id="contact">
@@ -391,6 +366,9 @@ export default function Experience() {
         <span>עין יעקב · מרחב לחופשה משותפת</span>
         <span>© {new Date().getFullYear()} אחוזת השמש</span>
       </footer>
+      <div className="home-legal container">
+        <LegalLinks />
+      </div>
       <a
         className="floating-wa"
         href={whatsapp}

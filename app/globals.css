@@ -1164,3 +1164,275 @@ h2 {
     display: none;
   }
 }
+/* Legal information shares the site's Hebrew typography and calm visual style. */
+.home-legal {
+  border-top: 1px solid var(--border);
+  padding: 16px 0 25px;
+}
+.legal-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 26px;
+  font-size: 14px;
+}
+.legal-links a {
+  padding: 6px 0;
+  text-decoration: underline;
+  text-decoration-color: #bbb9a7;
+  text-underline-offset: 5px;
+}
+.legal-links a:hover {
+  color: #897748;
+}
+.legal-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+.legal-document {
+  width: calc(100% - 48px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 70px 0 85px;
+}
+.legal-document h1 {
+  font-size: clamp(34px, 5vw, 54px);
+  line-height: 1.3;
+  margin-bottom: 36px;
+}
+.legal-body section {
+  margin-top: 34px;
+}
+.legal-body h2 {
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.5;
+  margin-bottom: 13px;
+}
+.legal-body p {
+  line-height: 1.95;
+}
+.legal-body p + p {
+  margin-top: 15px;
+}
+.legal-body ul {
+  list-style: disc;
+  padding-inline-start: 25px;
+  color: #646b62;
+  margin: 14px 0;
+}
+.legal-body li {
+  padding-inline-start: 3px;
+  margin-bottom: 7px;
+}
+.legal-body a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  overflow-wrap: anywhere;
+  color: #364b3c;
+}
+.legal-contact {
+  font-style: normal;
+  background: #eeeee5;
+  border-inline-start: 3px solid #a99157;
+  padding: 20px 24px;
+  margin-top: 20px;
+  line-height: 2;
+}
+.legal-contact a {
+  display: inline-block;
+}
+.legal-footer {
+  border-top: 1px solid var(--border);
+  padding: 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.legal-footer > span {
+  font-size: 13px;
+  color: #737969;
+}
+@media (max-width: 720px) {
+  body:has(.legal-page) {
+    padding-bottom: 0;
+  }
+  .legal-document {
+    padding: 45px 0 55px;
+    width: calc(100% - 40px);
+  }
+  .legal-body {
+    font-size: 16px;
+  }
+  .legal-body h2 {
+    font-size: 23px;
+  }
+  .legal-footer {
+    flex-direction: column;
+  }
+  .legal-links {
+    gap: 4px 20px;
+  }
+  .legal-page .brand {
+    font-size: 19px;
+  }
+  .legal-page .brand small {
+    font-size: 11px;
+  }
+  .legal-back {
+    font-size: 13px;
+  }
+  .legal-contact {
+    padding: 16px;
+  }
+  .home-legal {
+    padding-bottom: 26px;
+  }
+}
+.guest-reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 42px;
+  align-items: stretch;
+}
+.guest-review-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  min-width: 0;
+  background: #fff;
+  border: 1px solid #e0dfd3;
+  border-radius: 4px;
+  padding: 20px;
+  text-align: right;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+.guest-review-card:hover {
+  border-color: #a99b72;
+  box-shadow: 0 5px 20px #334a3c0b;
+}
+.guest-review-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-block: auto;
+}
+.guest-review-card > span {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 9px;
+  color: #68715e;
+  font-size: 13px;
+  border-top: 1px solid #eeeee6;
+  padding-top: 12px;
+  margin-top: 17px;
+}
+.review-dialog[data-slot='dialog-content'] {
+  z-index: 61;
+  width: calc(100vw - 32px);
+  max-width: 900px;
+  max-height: 88svh;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 28px;
+  background: #faf9f5;
+  border-radius: 5px;
+  text-align: right;
+  direction: rtl;
+}
+.review-dialog-title {
+  padding-left: 42px;
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.review-description {
+  font-size: 14px;
+  color: #697263;
+}
+.review-close {
+  position: absolute;
+  left: 12px;
+  top: 14px;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+}
+.review-dialog-scroll {
+  overflow-y: auto;
+  min-height: 0;
+  overscroll-behavior: contain;
+}
+.review-dialog-scroll img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background: white;
+}
+.review-transcript {
+  white-space: pre-line;
+  font-size: 17px;
+  line-height: 1.9;
+  margin: 24px 0 0;
+  padding: 20px;
+  border-right: 2px solid #a99157;
+  background: #efeee6;
+}
+.review-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #dfdfd2;
+  padding-top: 8px;
+  flex-shrink: 0;
+}
+.review-controls button {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+}
+.review-controls span {
+  font-size: 14px;
+  color: #68715e;
+}
+@media (max-width: 720px) {
+  .guest-reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 28px;
+  }
+  .guest-review-card {
+    padding: 12px;
+  }
+  .review-dialog[data-slot='dialog-content'] {
+    padding: 20px 16px;
+    max-height: 90svh;
+  }
+  .review-dialog-title {
+    font-size: 21px;
+  }
+  .review-transcript {
+    padding: 15px;
+    font-size: 16px;
+  }
+  .review-dialog-scroll img {
+    margin-top: 5px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .guest-review-card {
+    transition: none;
+  }
+}
