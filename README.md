@@ -30,3 +30,42 @@ pnpm dev
 ## העדפת עבודה
 
 לבקשת הבעלים, ממשיכים מקומית בלבד. אין להעלות גרסאות נוספות או לפרסם את האתר ללא בקשה מפורשת חדשה. נוצר בעבר עותק פרטי ב־Sites; הוא אינו אתר ציבורי.
+
+
+## Cloudflare Workers / GitHub deployment
+
+The application is a static Vinext export. `next.config.ts` retains
+`output: 'export'`; the Cloudflare Vite plugin builds the Worker and static
+assets. Wrangler automatically follows `.wrangler/deploy/config.json` to the
+generated `dist/server/wrangler.json` and deploys the bundled Worker with
+`dist/client` assets. The OpenAI Sites plugin is not loaded. The legacy `.openai/hosting.json`
+is not used by this Cloudflare deployment.
+
+Configure Workers Builds as follows:
+
+- Root directory: the directory containing `package.json`, `pnpm-lock.yaml`,
+  and `wrangler.jsonc`. In this Git repository that is `/`; if importing the
+  enclosing folder instead, select `website`.
+- Node.js: `24.19.0` (also recorded in `.node-version`).
+- pnpm: `11.19.0` (also pinned in `package.json`). Set the build environment
+  variable `PNPM_VERSION=11.19.0` if the dashboard has a different override.
+- Install: `pnpm install --frozen-lockfile`.
+- Build: `pnpm run build`.
+- Deploy: `npx wrangler deploy`.
+- The Cloudflare Worker project name must match `ahuzat-hashemesh` in
+  `wrangler.jsonc`. If the existing Worker uses another name, update this
+  field to that exact name before deployment.
+
+Local verification (no upload):
+
+```sh
+pnpm install --frozen-lockfile
+pnpm run build
+pnpm run deploy:check
+pnpm start
+```
+
+`pnpm start` serves the exported site with Wrangler's local asset routing.
+`pnpm dev` continues to run the development server. Static HTML handling serves
+`/accessibility`, `/privacy`, and `/terms` directly; unknown routes return the
+exported 404 page rather than the home page.

@@ -1,4 +1,9 @@
+# This repository contains one application at its root.
+packages:
+  - '.'
+
+# Explicit native dependency build permissions for unattended CI installs.
 allowBuilds:
-  esbuild: set this to true or false
-  sharp: set this to true or false
-  workerd: set this to true or false
+  esbuild: true
+  sharp: true
+  workerd: true
