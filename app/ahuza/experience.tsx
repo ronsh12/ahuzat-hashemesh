@@ -63,8 +63,8 @@ export function Photo({
   return (
     <img
       className={className}
-      src={`/photos/${name}-1280.webp`}
-      srcSet={`/photos/${name}-640.webp 640w, /photos/${name}-1280.webp 1280w, /photos/${name}-1920.webp 1920w`}
+      src={`/ahuza/photos/${name}-1280.webp`}
+      srcSet={`/ahuza/photos/${name}-640.webp 640w, /ahuza/photos/${name}-1280.webp 1280w, /ahuza/photos/${name}-1920.webp 1920w`}
       sizes={sizes}
       alt={alt}
       loading="lazy"
@@ -225,7 +225,7 @@ export default function Experience() {
             }}
           >
             <img
-              src={`/photos/${photos[current][0]}-1920.webp`}
+              src={`/ahuza/photos/${photos[current][0]}-1920.webp`}
               alt={photos[current][1]}
             />
           </div>

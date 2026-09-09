@@ -1,5 +1,7 @@
 import LegalPage, { LegalContact } from '../legal-page';
 export const metadata = {
+  alternates: { canonical: '/ahuza/privacy' },
+  openGraph: { title: 'מדיניות פרטיות | אחוזת השמש', url: 'https://shemesh-boutique.com/ahuza/privacy', locale: 'he_IL', type: 'website' },
   title: 'מדיניות פרטיות | אחוזת השמש',
   description:
     'מידע על איסוף פרטים, שימוש במידע אישי ודרכי פנייה בנושאי פרטיות באחוזת השמש.',

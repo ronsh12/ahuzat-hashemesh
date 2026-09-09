@@ -2,9 +2,9 @@ import { Sun, ArrowRight } from 'lucide-react';
 export function LegalLinks() {
   return (
     <nav className="legal-links" aria-label="מידע משפטי ונגישות">
-      <a href="/accessibility">הצהרת נגישות</a>
-      <a href="/privacy">מדיניות פרטיות</a>
-      <a href="/terms">תנאי שימוש</a>
+      <a href="/ahuza/accessibility">הצהרת נגישות</a>
+      <a href="/ahuza/privacy">מדיניות פרטיות</a>
+      <a href="/ahuza/terms">תנאי שימוש</a>
     </nav>
   );
 }
@@ -35,13 +35,13 @@ export default function LegalPage({
         דלגו לתוכן
       </a>
       <header className="header">
-        <a className="brand" href="/">
+        <a className="brand" href="/ahuza">
           <Sun />
           <span>
             אחוזת השמש<small>וילת נופש בגליל המערבי</small>
           </span>
         </a>
-        <a className="legal-back" href="/">
+        <a className="legal-back" href="/ahuza">
           <ArrowRight size={17} /> חזרה לאתר
         </a>
       </header>
@@ -49,7 +49,7 @@ export default function LegalPage({
         <div className="eyebrow">אחוזת השמש · מידע לאורחים</div>
         <h1>{title}</h1>
         <div className="legal-body">{children}</div>
-        <a className="text-link" href="/">
+        <a className="text-link" href="/ahuza">
           חזרה לאתר אחוזת השמש
           <ArrowRight size={17} />
         </a>

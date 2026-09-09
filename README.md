@@ -17,12 +17,12 @@ pnpm dev
 
 ## עריכת תוכן
 
-- `app/page.tsx`: פתיחה, יתרונות מרכזיים והיכרות.
-- `app/experience.tsx`: גלריה, מפרט, מיקום, פרטי אירוח ויצירת קשר.
-- `app/reviews.ts`: שש חוות הדעת שנמסרו, כולל שם, תמלול, נתיב צילום המסך ומידותיו. `app/guest-reviews.tsx` מציג את הצילומים ומאפשר פתיחה מוגדלת עם תמלול נגיש. צילומי המקור נשמרים ללא שינוי ב־`public/reviews`.
-- `app/globals.css`: עיצוב רספונסיבי וטיפוגרפיית Heebo במשקלים 400, 500 ו־600.
-- `app/layout.tsx`: כותרת, תיאור ומטא־נתונים לשיתוף.
-- `public/photos`: גרסאות WebP בגדלים 640, 1280 ו־1920. התמונות המקוריות נשארו בתיקיית `../images`.
+- `app/ahuza/page.tsx`: פתיחה, יתרונות מרכזיים והיכרות.
+- `app/ahuza/experience.tsx`: גלריה, מפרט, מיקום, פרטי אירוח ויצירת קשר.
+- `app/ahuza/reviews.ts`: שש חוות הדעת שנמסרו, כולל שם, תמלול, נתיב צילום המסך ומידותיו. `app/ahuza/guest-reviews.tsx` מציג את הצילומים ומאפשר פתיחה מוגדלת עם תמלול נגיש. צילומי המקור נשמרים ללא שינוי ב־`public/ahuza/reviews`.
+- `app/ahuza/globals.css`: עיצוב רספונסיבי וטיפוגרפיית Heebo במשקלים 400, 500 ו־600.
+- `app/ahuza/layout.tsx`: כותרת, תיאור ומטא־נתונים לשיתוף.
+- `public/ahuza/photos`: גרסאות WebP בגדלים 640, 1280 ו־1920. התמונות המקוריות נשארו בתיקיית `../images`.
 - `public/fonts`: קובצי Heebo מקומיים.
 
 קישור המפה מציג את מושב עין יעקב; הוא אינו טוען להציג כתובת מדויקת של הנכס. WhatsApp נפתח עם הודעה מוכנה, ללא שליחה אוטומטית.
@@ -67,5 +67,21 @@ pnpm start
 
 `pnpm start` serves the exported site with Wrangler's local asset routing.
 `pnpm dev` continues to run the development server. Static HTML handling serves
-`/accessibility`, `/privacy`, and `/terms` directly; unknown routes return the
+`/ahuza/accessibility`, `/ahuza/privacy`, and `/ahuza/terms` directly; unknown routes return the
 exported 404 page rather than the home page.
+
+
+## Multi-property routing
+
+- `/ahuza` is the unchanged Ahuzat HaShemesh website.
+- `/ahuza/accessibility`, `/ahuza/privacy`, and `/ahuza/terms` are its legal pages.
+- `/` is an independent temporary Shemesh Boutique page reserved for the future
+  brand homepage; it is marked noindex until the brand site is ready.
+- Villa photos and review screenshots live under `public/ahuza`; shared fonts
+  remain at `/fonts`. No global `basePath` is used, so other property routes can
+  be added alongside `/ahuza`.
+- Canonical and Open Graph URLs use `https://shemesh-boutique.com/ahuza` and
+  the matching legal-page URLs. The root layout owns only brand-wide metadata;
+  the villa layout owns its existing visual styles and property metadata.
+- Domain/DNS binding must be configured separately in Cloudflare. These source
+  changes do not purchase, bind, or deploy the domain.

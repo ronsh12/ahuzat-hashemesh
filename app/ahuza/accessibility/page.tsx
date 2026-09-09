@@ -1,5 +1,7 @@
 import LegalPage, { LegalContact } from '../legal-page';
 export const metadata = {
+  alternates: { canonical: '/ahuza/accessibility' },
+  openGraph: { title: 'הצהרת נגישות | אחוזת השמש', url: 'https://shemesh-boutique.com/ahuza/accessibility', locale: 'he_IL', type: 'website' },
   title: 'הצהרת נגישות | אחוזת השמש',
   description:
     'מידע על נגישות אתר אחוזת השמש ודרכי פנייה לרון שמש בנושאי נגישות.',

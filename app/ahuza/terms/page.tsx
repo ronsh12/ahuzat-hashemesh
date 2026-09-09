@@ -1,5 +1,7 @@
 import LegalPage from '../legal-page';
 export const metadata = {
+  alternates: { canonical: '/ahuza/terms' },
+  openGraph: { title: 'תנאי שימוש | אחוזת השמש', url: 'https://shemesh-boutique.com/ahuza/terms', locale: 'he_IL', type: 'website' },
   title: 'תנאי שימוש | אחוזת השמש',
   description:
     'תנאי השימוש באתר אחוזת השמש ומידע על יצירת קשר, הזמנות ותשלומים.',
