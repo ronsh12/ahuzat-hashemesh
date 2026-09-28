@@ -7,6 +7,7 @@ The project uses one Vinext/Cloudflare build with independently owned property r
 | `/` | `app/page.tsx` (reserved brand landing page) | None |
 | `/ahuza` | `app/ahuza/` | `public/ahuza/` |
 | `/ronbagalil` | `app/ronbagalil/` | `public/ronbagalil/` |
+| `/suite` | `app/suite/` | `public/suite/` |
 
 ## Adding a property
 
@@ -27,3 +28,7 @@ Photos were selected from `../images-ronbagalil` and exported as 640/1280/1920px
 - `pnpm start --port 8790`, then inspect `/`, `/ahuza`, and `/ronbagalil`.
 
 Adding property routes does not require changing the Cloudflare Worker entry point or the root page.
+
+## The couples suite
+
+`app/suite/` owns the Hebrew content, pink-gold CSS module, metadata and contact configuration for השמש הקסומה. Gallery and navigation are route-specific; dialog and accordion primitives come from the shared UI catalog. The original photos in `../images_suite` were selected into 12 distinct images, each with 640/1280/1920px WebP variants in `public/suite/photos`. Root and other property routes stay independent.
