@@ -62,7 +62,7 @@ export default function SuitePage() {
             <img
               src={photoUrl('pool-spa', 1920)}
               srcSet={photoSet('pool-spa')}
-              sizes="(max-width:800px) 100vw, 60vw"
+              sizes="100vw"
               width="1920"
               height="1280"
               fetchPriority="high"

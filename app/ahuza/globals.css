@@ -545,14 +545,16 @@ svg {
 }
 .gallery-item > span {
   position: absolute;
-  inset: auto 0 0;
-  padding: 35px 22px 17px;
+  bottom: 12px;
+  left: 12px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
   color: white;
+  background: #10221980;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  font-size: 15px;
-  background: linear-gradient(transparent, #102219aa);
+  justify-content: center;
 }
 .gallery-more {
   display: flex;
@@ -909,10 +911,7 @@ svg {
   .gallery-item.photo-5 {
     grid-column: span 2;
   }
-  .gallery-item > span {
-    padding: 30px 11px 11px;
-    font-size: 12px;
-  }
+
   .gallery-item > span svg {
     width: 14px;
   }
@@ -1136,9 +1135,7 @@ h2 {
 .info-grid h3 {
   font-weight: 500;
 }
-.gallery-item > span {
-  font-weight: 500;
-}
+
 @media (max-width: 720px) {
   .hero h1 {
     font-size: clamp(43px, 12.8vw, 64px);

@@ -180,8 +180,7 @@ export function Gallery() {
               loading="lazy"
               decoding="async"
             />
-            <span>
-              {photo.label}
+            <span aria-hidden="true">
               <Expand size={17} />
             </span>
           </button>

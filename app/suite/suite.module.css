@@ -135,16 +135,20 @@
   padding: 10px;
 }
 .hero {
-  display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-  min-height: 640px;
-  background: #f7edef;
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: clamp(640px, calc(100svh - 90px), 850px);
+  background: #382b31;
+  color: white;
+  isolation: isolate;
 }
 .heroCopy {
-  padding: 85px 45px 50px;
-  align-self: center;
-  max-width: 640px;
-  justify-self: end;
+  position: relative;
+  z-index: 1;
+  padding: 85px 40px;
+  max-width: 1240px;
+  margin: 0 auto;
   width: 100%;
 }
 .eyebrow {
@@ -162,7 +166,7 @@
 .site .heroLead {
   font-size: clamp(40px, 4.2vw, 65px);
   line-height: 1.18;
-  color: var(--ink);
+  color: white;
   font-weight: 500;
   letter-spacing: -1.6px;
 }
@@ -176,8 +180,40 @@
   font-size: 17px;
 }
 .heroVisual {
-  position: relative;
-  min-width: 0;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.heroVisual::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    270deg,
+    #21121bd6 0%,
+    #21121b80 48%,
+    #21121b20 100%
+  );
+}
+.hero .eyebrow {
+  color: #f0d9b3;
+}
+.heroCopy > p:not(.heroLead) {
+  color: #fff5f8;
+}
+.hero .goldLine {
+  background: #e5c793;
+}
+.hero .outlineButton {
+  color: white;
+  border-color: #ffffff99;
+  background: #ffffff0a;
+}
+.hero .outlineButton:hover {
+  background: #ffffff26;
+}
+.hero .discover {
+  color: #fff5f8 !important;
 }
 .heroVisual img {
   height: 100%;
@@ -326,16 +362,8 @@
   .navContact {
     margin-right: auto;
   }
-  .hero {
-    grid-template-columns: 1fr;
-  }
   .heroCopy {
-    justify-self: stretch;
-    max-width: none;
-    padding: 48px 30px 38px;
-  }
-  .heroVisual {
-    height: 410px;
+    padding: 65px 30px;
   }
   .heroVisual img {
     object-position: center 55%;
@@ -376,7 +404,7 @@
     top: 72px;
   }
   .heroCopy {
-    padding: 37px 24px 32px;
+    padding: 65px 24px;
   }
   .hero h1 {
     font-size: 20px;
@@ -395,9 +423,6 @@
   }
   .heroCopy > p:not(.heroLead) {
     font-size: 16px;
-  }
-  .heroVisual {
-    height: 310px;
   }
   .actions {
     gap: 10px;
