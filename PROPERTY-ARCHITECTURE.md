@@ -31,4 +31,4 @@ Adding property routes does not require changing the Cloudflare Worker entry poi
 
 ## The couples suite
 
-`app/suite/` owns the Hebrew content, pink-gold CSS module, metadata and contact configuration for השמש הקסומה. Gallery and navigation are route-specific; dialog and accordion primitives come from the shared UI catalog. The original photos in `../images_suite` were selected into 12 distinct images, each with 640/1280/1920px WebP variants in `public/suite/photos`. Root and other property routes stay independent.
+`app/suite/` owns the Hebrew content, pink-gold CSS module, metadata and contact configuration for השמש הקסומה. Gallery and navigation are route-specific; dialog and accordion primitives come from the shared UI catalog. The gallery includes every image directly in `../images_suite` (currently 39), excluding subdirectories. Each source filename is recorded in `app/suite/content.ts`, with 640/1280/1920px WebP variants in `public/suite/photos`. Ten curated photos are shown initially without overlaid captions; all 39 remain available through the lightbox and its navigation controls. Root and other property routes stay independent.

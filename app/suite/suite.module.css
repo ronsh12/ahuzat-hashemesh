@@ -239,7 +239,8 @@
 }
 .stats {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 25px;
   max-width: 1240px;
   margin: auto;
   padding: 33px 30px;
@@ -249,7 +250,7 @@
   text-align: center;
   border-left: 1px solid #e2d3d9;
 }
-.stats > div:last-child {
+.stats > div:nth-child(3n) {
   border: 0;
 }
 .stats strong {
@@ -415,7 +416,10 @@
     gap: 25px 0;
     padding: 28px 18px;
   }
-  .stats > div:nth-child(2) {
+  .stats > div:nth-child(odd) {
+    border-left: 1px solid #e2d3d9;
+  }
+  .stats > div:nth-child(even) {
     border: 0;
   }
   .stats strong {
@@ -580,16 +584,15 @@
 }
 .galleryTile > span {
   position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  padding: 35px 18px 16px;
-  background: linear-gradient(transparent, #27141ec9);
+  bottom: 12px;
+  left: 12px;
+  width: 34px;
+  height: 34px;
+  background: #27141e80;
+  border-radius: 50%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  font-size: 14px;
+  justify-content: center;
 }
 .center {
   text-align: center;
@@ -865,14 +868,13 @@
   }
   .outsideNotes > div {
     display: grid;
-    grid-template-columns: 25px 1fr;
+    grid-template-columns: 1fr;
     gap: 5px 10px;
   }
   .outsideNotes > div > span {
     padding-top: 5px;
   }
   .outsideNotes p {
-    grid-column: 2;
     font-size: 15px;
   }
   .outsideNotes h3 {
@@ -889,10 +891,6 @@
     grid-auto-rows: 180px;
     grid-template-rows: 245px;
     gap: 8px;
-  }
-  .galleryTile > span {
-    font-size: 12px;
-    padding: 35px 10px 12px;
   }
   .galleryTile > span svg {
     width: 14px;

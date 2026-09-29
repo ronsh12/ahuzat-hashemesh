@@ -37,7 +37,7 @@ export function Navigation() {
           className={s.brand}
           aria-label="השמש הקסומה — ראש העמוד"
         >
-          השמש הקסומה<span>סוויטה פרטית לזוג · עין יעקב</span>
+          השמש הקסומה<span>סוויטה פרטית לזוג · גליל מערבי</span>
         </a>
         <nav
           aria-label="ניווט ראשי"
@@ -147,12 +147,11 @@ function Lightbox({
   );
 }
 export function Gallery() {
-  const [all, setAll] = useState(false);
   const [index, setIndex] = useState<number | null>(null);
   return (
     <>
       <div className={s.galleryGrid}>
-        {gallery.slice(0, all ? gallery.length : 5).map((photo, i) => (
+        {gallery.slice(0, 10).map((photo, i) => (
           <button
             className={s.galleryTile}
             key={photo.name}
@@ -171,17 +170,15 @@ export function Gallery() {
               loading="lazy"
               decoding="async"
             />
-            <span>
-              {photo.label}
+            <span aria-hidden="true">
               <Expand size={17} />
             </span>
           </button>
         ))}
       </div>
       <div className={s.center}>
-        <button className={s.outlineButton} onClick={() => setAll(!all)}>
-          {all ? 'הצגת פחות תמונות' : `לכל התמונות (${gallery.length})`}
-          <ArrowLeft size={18} />
+        <button className={s.outlineButton} onClick={() => setIndex(0)}>
+          לכל {gallery.length} התמונות <ArrowLeft size={18} />
         </button>
       </div>
       <Lightbox

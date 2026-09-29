@@ -49,7 +49,7 @@ export default function SuitePage() {
             </p>
             <div className={s.goldLine} />
             <p>
-              סוויטה פרטית לשניים, בריכה מחוממת וספא.
+              סוויטה פרטית לזוג, בריכה מחוממת וספא.
               <br />
               מקום קטן לעצור בו, ולהיות יחד.
             </p>
@@ -68,27 +68,32 @@ export default function SuitePage() {
               fetchPriority="high"
               alt="הבריכה הפרטית והג׳קוזי בחצר המקורה של השמש הקסומה"
             />
-            <span className={s.photoNote}>הבריכה. הספא. השקט שלכם.</span>
           </div>
         </section>
         <div className={s.stats}>
           <div>
-            <strong>2</strong>
-            <span>אורחים</span>
+            <strong>חופשה זוגית</strong>
+            <span>זמן להיות יחד</span>
           </div>
           <div>
-            <strong>
-              42 <small>מ״ר</small>
-            </strong>
-            <span>של מרחב זוגי, בקירוב</span>
+            <strong>סוויטה פרטית</strong>
+            <span>מרחב נעים לשניכם</span>
           </div>
           <div>
             <strong>בריכה פרטית</strong>
             <span>מחוממת ומקורה</span>
           </div>
           <div>
-            <strong>ג׳קוזי וספא</strong>
-            <span>בפנים ובחוץ</span>
+            <strong>ג׳קוזי ספא</strong>
+            <span>פנימי וחיצוני</span>
+          </div>
+          <div>
+            <strong>נוף גלילי</strong>
+            <span>מבט פתוח אל הרי הגליל</span>
+          </div>
+          <div>
+            <strong>פינוקים שמחכים לכם</strong>
+            <span>יין או שמפניה, שוקולדים ועוד</span>
           </div>
         </div>
         <section id="experience" className={`${s.section} ${s.story}`}>
@@ -114,15 +119,15 @@ export default function SuitePage() {
               קצת יותר יחד.
             </h2>
             <p>
-              מיטת קינג סייז, ג׳קוזי זוגי ופינת אוכל אינטימית. כ־42 מ״ר שמיועדים
-              לשני אורחים, עם חדר שינה וחדר רחצה.
+              מיטת קינג סייז, ג׳קוזי זוגי ופינת אוכל אינטימית. סוויטה נעימה
+              לזוג, עם חדר שינה וחדר רחצה, וכל מה שצריך כדי להרגיש בנוח.
             </p>
             <p>
               להכין קפה במטבחון, לבחור סרט או פשוט להישאר עוד קצת במיטה. בלי
               תוכניות גדולות.
             </p>
             <div className={s.smallFacts}>
-              <span>מיטת קינג סייז · 180 ס״מ</span>
+              <span>מיטת קינג סייז</span>
               <span>ג׳קוזי זוגי בתוך הסוויטה</span>
             </div>
             <a className={s.textLink} href="#details">
@@ -160,23 +165,20 @@ export default function SuitePage() {
               />
               <div className={s.outsideNotes}>
                 <div>
-                  <span>01</span>
                   <h3>הבריכה הפרטית</h3>
                   <p>
-                    בריכה בנויה בגודל <bdi dir="ltr">6×3</bdi> מטר, מחוממת
-                    ומקורה. אפשר לפתוח את חלונות הקירוי.
+                    בריכה פרטית מחוממת ומקורה, לטבילה רגועה בקצב שלכם. אפשר
+                    לפתוח את חלונות הקירוי וליהנות מהאוויר שבחוץ.
                   </p>
                 </div>
                 <div>
-                  <span>02</span>
                   <h3>ג׳קוזי ספא בחוץ</h3>
                   <p>
-                    ספא גדול בגודל <bdi dir="ltr">250×250</bdi> ס״מ, לצד פינת
-                    ישיבה מקורה.
+                    להתרווח במים החמים של הספא, ואז לעבור לפינת הישיבה המקורה
+                    ולהמשיך את הזמן שלכם יחד.
                   </p>
                 </div>
                 <div>
-                  <span>03</span>
                   <h3>לבחור פינה משלכם</h3>
                   <p>
                     מיטות שיזוף, ערסל, קונכיית רביצה וריהוט גן. גם גריל פחמים
@@ -342,7 +344,7 @@ export default function SuitePage() {
       <footer className={s.footer}>
         <div>
           <a href="#main" className={s.brand}>
-            השמש הקסומה<span>סוויטה פרטית לזוג · עין יעקב</span>
+            השמש הקסומה<span>סוויטה פרטית לזוג · גליל מערבי</span>
           </a>
         </div>
         <nav className={s.footerLinks} aria-label="קישורים בתחתית העמוד">
