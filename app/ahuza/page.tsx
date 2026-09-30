@@ -15,7 +15,7 @@ import Experience, { MobileMenu } from './experience';
 const whatsapp =
   'https://wa.me/972505998055?text=' +
   encodeURIComponent(
-    'היי, הגעתי מהאתר, אשמח לשמוע פרטים על המקום.\nתאריכים:\nכמות אורחים:',
+    'היי, הגעתי מהאתר אחוזת השמש, אשמח לשמוע פרטים על המקום.\nתאריכים:\nכמות אורחים:',
   );
 export default function Home() {
   return (

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
+  icons: { icon: '/ronbagalil/favicon.svg' },
   title: 'וילת רון בגליל | חופשה פרטית בעין יעקב',
   description:
     'וילת רון בגליל בעין יעקב: 6 סוויטות, בריכה פרטית מחוממת, ג׳קוזי ונוף גלילי. אירוח לעד 18 אורחים בגליל המערבי. לפרטים ותיאום חופשה: 050-599-8055.',

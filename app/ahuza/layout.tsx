@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 export const metadata: Metadata = {
+  icons: { icon: '/ahuza/favicon.svg' },
   alternates: { canonical: '/ahuza' },
   title: 'אחוזת השמש | וילת נופש עם בריכה פרטית בגליל המערבי',
   description:
