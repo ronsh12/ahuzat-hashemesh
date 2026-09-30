@@ -64,29 +64,9 @@ export const gallery = [
     alt: 'מיטות שיזוף וקונכיית רביצה בחצר הפרטית',
   },
   {
-    source: '_AEZ4659.jpg',
-    name: 'gallery-_aez4659',
-    alt: 'שולחן הישיבה בחצר באור השמש',
-  },
-  {
     source: '_AEZ4661.jpg',
     name: 'gallery-_aez4661',
     alt: 'פינת ישיבה עגולה בחצר',
-  },
-  {
-    source: '_AEZ4662.jpg',
-    name: 'gallery-_aez4662',
-    alt: 'פינת הישיבה לצד הבריכה הפרטית',
-  },
-  {
-    source: '_AEZ4663.jpg',
-    name: 'gallery-_aez4663',
-    alt: 'ערסל תלוי מתחת לעץ הדקל',
-  },
-  {
-    source: '_AEZ4664.jpg',
-    name: 'gallery-_aez4664',
-    alt: 'גריל הפחמים בחצר',
   },
   {
     source: '_AEZ4665.jpg',
@@ -94,59 +74,14 @@ export const gallery = [
     alt: 'גריל הפחמים לצד הצמחייה בחצר',
   },
   {
-    source: '_AEZ4666.jpg',
-    name: 'gallery-_aez4666',
-    alt: 'גריל הפחמים באור השמש',
-  },
-  {
-    source: '_AEZ4668.jpg',
-    name: 'gallery-_aez4668',
-    alt: 'פינת הגריל בחצר הירוקה',
-  },
-  {
-    source: '_AEZ4669.jpg',
-    name: 'gallery-_aez4669',
-    alt: 'מבט מקרוב אל הערסל בחצר',
-  },
-  {
     source: '_AEZ4672.jpg',
     name: 'gallery-_aez4672',
     alt: 'מיטות השיזוף והערסל בחצר',
   },
   {
-    source: '_AEZ4673.jpg',
-    name: 'gallery-_aez4673',
-    alt: 'בקבוקי יין וכוסות ליד הג׳קוזי',
-  },
-  {
-    source: '_AEZ4674.jpg',
-    name: 'wine',
-    alt: 'פינת היין על שפת הג׳קוזי',
-  },
-  {
     source: '_AEZ4678.jpg',
     name: 'bed',
     alt: 'המיטה הזוגית עם מצעים לבנים',
-  },
-  {
-    source: '_AEZ4683.jpg',
-    name: 'gallery-_aez4683',
-    alt: 'חדר השינה ופינת הישיבה',
-  },
-  {
-    source: '_AEZ4687.jpg',
-    name: 'gallery-_aez4687',
-    alt: 'כורסה כחולה לצד המיטה',
-  },
-  {
-    source: '_AEZ4689.jpg',
-    name: 'gallery-_aez4689',
-    alt: 'שידת הלילה בחדר השינה',
-  },
-  {
-    source: '_AEZ4692.jpg',
-    name: 'gallery-_aez4692',
-    alt: 'קונכיית רביצה לצד קיר הסוויטה',
   },
   {
     source: '_AEZ4717-1.jpg',
@@ -187,11 +122,6 @@ export const gallery = [
     source: '_AEZ4828-1.jpg',
     name: 'gallery-_aez4828-1',
     alt: 'הדקל וקונכיית הרביצה בחצר',
-  },
-  {
-    source: '_AEZ4828.jpg',
-    name: 'gallery-_aez4828',
-    alt: 'מבט רחב אל פינות המנוחה בחצר',
   },
   {
     source: '_AEZ4832-HDR.jpg',
