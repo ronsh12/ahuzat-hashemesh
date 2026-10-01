@@ -64,16 +64,6 @@ export const gallery = [
     alt: 'מיטות שיזוף וקונכיית רביצה בחצר הפרטית',
   },
   {
-    source: '_AEZ4661.jpg',
-    name: 'gallery-_aez4661',
-    alt: 'פינת ישיבה עגולה בחצר',
-  },
-  {
-    source: '_AEZ4665.jpg',
-    name: 'gallery-_aez4665',
-    alt: 'גריל הפחמים לצד הצמחייה בחצר',
-  },
-  {
     source: '_AEZ4672.jpg',
     name: 'gallery-_aez4672',
     alt: 'מיטות השיזוף והערסל בחצר',
@@ -97,11 +87,6 @@ export const gallery = [
     source: '_AEZ4780-HDR-1.jpg',
     name: 'suite',
     alt: 'חדר השינה והג׳קוזי לצד פינת האוכל',
-  },
-  {
-    source: '_AEZ4791.jpg',
-    name: 'gallery-_aez4791',
-    alt: 'פינת האוכל בחוץ באור השמש',
   },
   {
     source: '_AEZ4793.jpg',
